@@ -1,0 +1,1451 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Flex.Entity.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Flex.Entity.Api.BundleConfig">
+            <summary>
+            Enable bundling of scripts
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            
+            </summary>
+            <param name="bundles"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.FilterConfig">
+            <summary>
+            Change the Filter Config during startup
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            Add Application Insight to the filter chain.
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.App_Start.HandlerConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.App_Start.HandlerConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.App_Start.WebApiFilterConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.App_Start.WebApiFilterConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.App_Start.JsonWebTokenConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.App_Start.JsonWebTokenConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.HateoasRepresentations.EntityChildrenRepresentation">
+            <summary>
+            Collection of Entities
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.HateoasRepresentations.EntityChildrenRepresentation.#ctor(System.Collections.Generic.IList{Flex.Entity.Api.HateoasRepresentations.EntityRepresentation},System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            
+            </summary>
+            <param name="list"></param>
+            <param name="code"></param>
+            <param name="hierarchy"></param>
+            <param name="at"></param>
+        </member>
+        <member name="M:Flex.Entity.Api.HateoasRepresentations.EntityChildrenRepresentation.CreateHypermedia">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.HateoasRepresentations.EntitiesRepresentation">
+            <summary>
+            Collection of Entities
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.EntitiesRepresentation.page_count">
+            <summary>
+            total number of pages for current top value
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.EntitiesRepresentation.page_number">
+            <summary>
+            current page number base don current top value
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.HateoasRepresentations.EntitiesRepresentation.#ctor(System.Collections.Generic.IList{Flex.Entity.Api.HateoasRepresentations.EntityRepresentation},System.Nullable{System.DateTime},System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="list"></param>
+            <param name="at"></param>
+            <param name="pageCount"></param>
+            <param name="pageNumber"></param>
+        </member>
+        <member name="M:Flex.Entity.Api.HateoasRepresentations.EntitiesRepresentation.CreateHypermedia">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.HateoasRepresentations.EntityRepresentation">
+            <summary>
+            HATEOAS Representation for entity objects
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.EntityRepresentation.code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.EntityRepresentation.type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.EntityRepresentation.name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.EntityRepresentation.service_parent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.EntityRepresentation.asset_parent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.EntityRepresentation.updated_at">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.HateoasRepresentations.EntityRepresentation.#ctor(System.Nullable{System.DateTime})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.HateoasRepresentations.EntityRepresentation.CreateHypermedia">
+            <summary>
+            Create the HATEOAS Links
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates">
+            <summary>
+            HAL Link Templates 
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entities">
+            <summary>
+            defines the links for entities
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entities.GetEntities">
+            <summary>
+            /all entities
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entities.NextPageEntities">
+            <summary>
+            /entities?top={top}&amp;skip={skip}
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entities.PreviousPageEntities">
+            <summary>
+            /entities?top={top}&amp;skip={skip}
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entitiyChildren">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entitiyChildren.AssetChildren">
+            <summary>
+            ~/entities/{code}/children/asset"
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entitiyChildren.ServiceChildren">
+            <summary>
+            /entities/{code}/children/service
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entity.Entity">
+            <summary>
+            /entities/{code}
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entity.Tags">
+            <summary>
+            /entities/{code}/tags
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entity.AssetChildren">
+            <summary>
+            /entities/{code}/children/asset
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.HateoasRepresentations.HatoasLinkTemplates.entity.ServiceChildren">
+            <summary>
+            /entities/{code}/children/service
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.TagTypeResponseExamples">
+            <summary>
+            TagType for swagger
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.TagTypeResponseExamplesSingle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.TagTypeRequestExample">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.TagsResponseExamples">
+            <summary>
+            Tags for swagger
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityResponseExamples200">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityResponseExamples200.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityResponseExamples400">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityResponseExamples400.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityResponseExamples404">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityResponseExamples404.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.EntityAtResponseExamples">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.EntityAtResponseExamples.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.EntityAtResponseExamplesSingle">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.EntityAtResponseExamplesSingle.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.EntitiesResponseExamples">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.EntitiesResponseExamples.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.EntityDetailResponseExamples">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.EntityDetailResponseExamples.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.EntityResponseExamplesSingle">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.EntityResponseExamplesSingle.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.EntityPatchRequestExampleSingle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.EntityPatchRequestExampleSingle.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.EntityRequestExampleSingle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.EntityRequestExampleSingle.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.StringRequestExample">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.StringRequestExample.GetExample(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityTypeResponseExamples200">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityTypeResponseExamples200.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityTypeResponseExamples400">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityTypeResponseExamples400.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityTypeResponseExamples404">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultEntityTypeResponseExamples404.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultResponseExamples401">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultResponseExamples401.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultResponseExamples405">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultResponseExamples405.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultResponseExamples500">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.ApiResultResponseExamples500.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.EntityTypeResponseExamples">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.EntityTypeResponseExamples.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.SwaggerExamples.EntityTypeResponseExamplesSingle">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.SwaggerExamples.EntityTypeResponseExamplesSingle.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.TagsController">
+            <summary>
+            </summary>
+            
+        </member>
+        <member name="P:Flex.Entity.Api.Controllers.TagsController.Logger">
+            <summary>
+            ApplicationInsights
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagsController.#ctor(Flex.Entity.Repository.ITagRepository)">
+            <summary>
+            </summary>
+            <param name="tagRepository"></param>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagsController.GetAllAsync(System.Threading.CancellationToken,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="entityCode"></param>
+            <param name="at"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagsController.GetSingleAsync(System.Threading.CancellationToken,System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            </summary>
+            <param name="entityCode"></param>
+            <param name="key"></param>
+            <param name="cancellationToken"></param>
+            <param name="at"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagsController.CreateAsync(System.Threading.CancellationToken,System.String,System.String,Flex.Entity.Api.Model.TagRequest)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="key"></param>
+            <param name="tag"></param>
+            <param name="entityCode"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>s
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagsController.DeleteAsync(System.Threading.CancellationToken,System.String,System.String)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="entityCode"></param>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.EntityController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityController.#ctor(Flex.Entity.Repository.IEntityRepository)">
+            <summary>
+            </summary>
+            <param name="entityRepository"></param>
+        </member>
+        <member name="P:Flex.Entity.Api.Controllers.EntityController.Logger">
+            <summary>
+                Logger Injected by the framework
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityController.GetCollectionAsync(System.Threading.CancellationToken,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+                Provides all entities, possibly filtered by the query string. See "Parameters" for all the filter parameters.
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="top">Maximum number of results to return.( default top=1000)</param>
+            <param name="skip">Pagination offset (default skip = 0)</param>
+            <param name="name">Partial match on the entity's name.</param>
+            <param name="service_descendant">Descends from this service entity code.</param>
+            <param name="asset_descendant">Descends from this asset entity code.</param>
+            <param name="service_child">Is immediate child of this service entity code.</param>
+            <param name="asset_child">Is immediate child of this asset entity code.</param>
+            <param name="has_tag">Has non-null value for this tag.</param>
+            <param name="matches_tag">Has given key:value for the tag.</param>
+            <param name="at">travels back in time as at datetime and then applies any of the above filters. Default is now</param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityController.GetChildrenAsync(System.Threading.CancellationToken,System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            </summary>
+            <param name="code"></param>
+            <param name="cancellationToken"></param>
+            <param name="hierarchy">Either "asset" or "service"</param>
+            <param name="at"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityController.GetSingleAsync(System.Threading.CancellationToken,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            </summary>
+            <param name="code"></param>
+            <param name="cancellationToken"></param>
+            <param name="at"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityController.CreateAsync(System.Threading.CancellationToken,Flex.Entity.Api.Model.EntityRequest)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="entityRequest"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+            s
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityController.UpdateAsync(System.Threading.CancellationToken,System.String,Flex.Entity.Api.Helpers.Delta{Flex.Entity.Api.Model.EntityPatchRequest})">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="code">The entity code that needs to be updated</param>
+            <param name="entityRequestDelta">the properties of the entity that need to be updated</param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+            s
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityController.DeleteAsync(System.Threading.CancellationToken,System.String,System.Boolean)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="code"></param>
+            <param name="delete_all_descendants"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.TagTypesController">
+            <summary>
+            </summary>
+            
+        </member>
+        <member name="P:Flex.Entity.Api.Controllers.TagTypesController.Logger">
+            <summary>
+            ApplicationInsights
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagTypesController.#ctor(Flex.Entity.Repository.ITagTypeRepository)">
+            <summary>
+            </summary>
+            <param name="tagTypeRepository"></param>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagTypesController.GetAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagTypesController.GetSingleAsync(System.Threading.CancellationToken,System.String)">
+            <summary>
+            </summary>
+            <param name="key"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagTypesController.CreateAsync(System.Threading.CancellationToken,Flex.Entity.Api.Model.TagType)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="tagType"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>s
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.TagTypesController.DeleteAsync(System.Threading.CancellationToken,System.String)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.WarmUpController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.WarmUpController.Index(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.EntityTypesController">
+            <summary>
+            </summary>
+            
+        </member>
+        <member name="P:Flex.Entity.Api.Controllers.EntityTypesController.Logger">
+            <summary>
+            Logger Injected by the framework
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityTypesController.#ctor(Flex.Entity.Repository.IEntityTypeRepository)">
+            <summary>
+            </summary>
+            <param name="entityTypeRepository"></param>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityTypesController.GetAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityTypesController.GetSingleAsync(System.Threading.CancellationToken,System.String)">
+            <summary>
+            </summary>
+            <param name="prefix"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityTypesController.CreateAsync(System.Threading.CancellationToken,Flex.Entity.Api.Model.EntityType)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="entityType"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>s
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.EntityTypesController.DeleteAsync(System.Threading.CancellationToken,System.String)">
+            <summary>
+            </summary>
+            <param name="cancellationToken"></param>
+            <param name="prefix"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="T:Flex.Entity.Api.Controllers.ExtendedApiController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.ExtendedApiController.ServerErrorApiResult(System.Exception)">
+            <summary>
+            Allows you to return a 500 with an ApiResult Payload
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.ExtendedApiController.BadRequestApiResult(System.Web.Http.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Allows you to return a 400 with an ApiResult Payload
+            </summary>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.ExtendedApiController.NotFoundApiResult(System.String)">
+            <summary>
+            Allows you to return a 404 with an ApiResult Payload
+            </summary>
+            <param name="errorMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Controllers.ExtendedApiController.UnauthorizedApiResult(System.String)">
+            <summary>
+            Send an unauthorized apiresult back to caller
+            </summary>
+            <param name="allErrors"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.Authorization.FlexClaimsPrincipal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.Authorization.FlexClaimsPrincipal.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userName"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.Authorization.Root">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Flex.Entity.Api.CustomFilters.Authorization.Root.Oe">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Flex.Entity.Api.CustomFilters.Authorization.Root.Jsb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Flex.Entity.Api.CustomFilters.Authorization.Root.Entities">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Flex.Entity.Api.CustomFilters.Authorization.Root.Decendants">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute._authenticationFilterImplementation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.ComponentContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.Container">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.#ctor(Flex.Entity.Security.ISecurityAuthentication)">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.Authentication">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.LifetimeScope">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.SymmetricKey">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.Audience">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.Issuer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.Realm">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.Domain">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.AllowMultiple">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.Authorization.JsonWebTokenAuthenticationAttribute.ChallengeAsync(System.Web.Http.Filters.HttpAuthenticationChallengeContext,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.ApplicationLogActionFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.ApplicationLogActionFilter.OnActionExecutedAsync(System.Web.Http.Filters.HttpActionExecutedContext,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.ApplicationLogActionFilter.OnActionExecutingAsync(System.Web.Http.Controllers.HttpActionContext,System.Threading.CancellationToken)">
+            <summary>
+            Occurs before the action method is invoked.
+            </summary>
+            <param name="actionContext">The context for the action.</param><param name="cancellationToken">A cancellation token for signaling task ending.</param>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.ResponseTransformHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.ResponseTransformHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            Sends an HTTP request to the inner handler to send to the server as an asynchronous operation.
+            </summary>
+            <returns>
+            Returns <see cref="T:System.Threading.Tasks.Task`1"/>. The task object representing the asynchronous operation.
+            </returns>
+            <param name="request">The HTTP request message to send to the server.</param><param name="cancellationToken">A cancellation token to cancel operation.</param><exception cref="T:System.ArgumentNullException">The <paramref name="request"/> was null.</exception>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.UnhandledExceptionFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.Swagger.AssignOAuth2SecurityRequirements">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.Swagger.AssignOAuth2SecurityRequirements.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="schemaRegistry"></param>
+            <param name="apiDescription"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.Swagger.IProvideExample">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.Swagger.IProvideExample.GetExample(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.Swagger.SwaggerExampleOperationFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.Swagger.SwaggerExampleOperationFilter.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="schemaRegistry"></param>
+            <param name="apiDescription"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.Swagger.SwaggerRequestExampleAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.Swagger.SwaggerRequestExampleAttribute.#ctor(System.Type,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="responseType"></param>
+            <param name="exampleProvider"></param>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Swagger.SwaggerRequestExampleAttribute.ExampleType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Swagger.SwaggerRequestExampleAttribute.RequestType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.Swagger.SwaggerResponseExampleAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.Swagger.SwaggerResponseExampleAttribute.#ctor(System.Net.HttpStatusCode,System.Type,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+            <param name="responseType"></param>
+            <param name="exampleType"></param>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Swagger.SwaggerResponseExampleAttribute.StatusCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Swagger.SwaggerResponseExampleAttribute.ResponseType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.CustomFilters.Swagger.SwaggerResponseExampleAttribute.ExampleType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.CustomFilters.Swagger.SwaggerVerbFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.CustomFilters.Swagger.SwaggerVerbFilter.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="schemaRegistry"></param>
+            <param name="apiDescription"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.BitMaskChecker">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.BitMaskChecker.PermissionMasks``1(System.Enum)">
+            <summary>
+            Method 1 uses foreach loop to return the Enumerable
+            </summary>
+            <param name="mask"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.BitMaskChecker.PermissionMasksV2``1(System.Enum)">
+            <summary>
+            Method 2 seems to be more affective
+            </summary>
+            <param name="mask"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.Delta`1">
+            <summary>
+            A class the tracks changes (i.e. the Delta) for a particular <typeparamref name="TEntityType"/>.
+            </summary>
+            <typeparam name="TEntityType">TEntityType is the base type of entity this delta tracks changes for.</typeparam>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Flex.Entity.Api.Helpers.Delta`1"/>.
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of <see cref="T:Flex.Entity.Api.Helpers.Delta`1"/>.
+            </summary>
+            <param name="entityType">The derived entity type for which the changes would be tracked.
+            <paramref name="entityType"/> should be assignable to instances of <typeparamref name="TEntityType"/>.</param>
+        </member>
+        <member name="P:Flex.Entity.Api.Helpers.Delta`1.EntityType">
+            <summary>
+            The actual type of the entity for which the changes are tracked.
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.Clear">
+            <summary>
+            Clears the Delta and resets the underlying Entity.
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.TrySetPropertyValue(System.String,System.Object)">
+            <summary>
+            Attempts to set the Property called <paramref name="name"/> to the <paramref name="value"/> specified.
+            <remarks>
+            Only properties that exist on <see cref="P:Flex.Entity.Api.Helpers.Delta`1.EntityType"/> can be set.
+            If there is a type mismatch the request will fail.
+            </remarks>
+            </summary>
+            <param name="name">The name of the Property</param>
+            <param name="value">The new value of the Property</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.TryGetPropertyValue(System.String,System.Object@)">
+            <summary>
+            Attempts to get the value of the Property called <paramref name="name"/> from the underlying Entity.
+            <remarks>
+            Only properties that exist on <see cref="P:Flex.Entity.Api.Helpers.Delta`1.EntityType"/> can be retrieved.
+            Both modified and unmodified properties can be retrieved.
+            </remarks>
+            </summary>
+            <param name="name">The name of the Property</param>
+            <param name="value">The value of the Property</param>
+            <returns>True if the Property was found</returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.TryGetPropertyType(System.String,System.Type@)">
+            <summary>
+            Attempts to get the <see cref="T:System.Type"/> of the Property called <paramref name="name"/> from the underlying Entity.
+            <remarks>
+            Only properties that exist on <see cref="P:Flex.Entity.Api.Helpers.Delta`1.EntityType"/> can be retrieved.
+            Both modified and unmodified properties can be retrieved.
+            </remarks>
+            </summary>
+            <param name="name">The name of the Property</param>
+            <param name="type">The type of the Property</param>
+            <returns>Returns <c>true</c> if the Property was found and <c>false</c> if not.</returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)">
+            <summary>
+            Overrides the DynamicObject TrySetMember method, so that only the properties
+            of <see cref="P:Flex.Entity.Api.Helpers.Delta`1.EntityType"/> can be set.
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)">
+            <summary>
+            Overrides the DynamicObject TryGetMember method, so that only the properties
+            of <see cref="P:Flex.Entity.Api.Helpers.Delta`1.EntityType"/> can be got.
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.GetEntity">
+            <summary>
+            Returns the <see cref="P:Flex.Entity.Api.Helpers.Delta`1.EntityType"/> instance
+            that holds all the changes (and original values) being tracked by this Delta.
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.GetChangedPropertyNames">
+            <summary>
+            Returns the Properties that have been modified through this Delta as an 
+            enumeration of Property Names 
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.GetUnchangedPropertyNames">
+            <summary>
+            Returns the Properties that have not been modified through this Delta as an 
+            enumeration of Property Names 
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.CopyChangedValues(`0)">
+            <summary>
+            Copies the changed property values from the underlying entity (accessible via <see cref="M:Flex.Entity.Api.Helpers.Delta`1.GetEntity" />) 
+            to the <paramref name="original"/> entity.
+            </summary>
+            <param name="original">The entity to be updated.</param>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.CopyUnchangedValues(`0)">
+            <summary>
+            Copies the unchanged property values from the underlying entity (accessible via <see cref="M:Flex.Entity.Api.Helpers.Delta`1.GetEntity" />) 
+            to the <paramref name="original"/> entity.
+            </summary>
+            <param name="original">The entity to be updated.</param>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.Patch(`0)">
+            <summary>
+            Overwrites the <paramref name="original"/> entity with the changes tracked by this Delta.
+            <remarks>The semantics of this operation are equivalent to a HTTP PATCH operation, hence the name.</remarks>
+            </summary>
+            <param name="original">The entity to be updated.</param>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Delta`1.Put(`0)">
+            <summary>
+            Overwrites the <paramref name="original"/> entity with the values stored in this Delta.
+            <remarks>The semantics of this operation are equivalent to a HTTP PUT operation, hence the name.</remarks>
+            </summary>
+            <param name="original">The entity to be updated.</param>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.PropertyAccessor`1">
+            <summary>
+            Represents a strategy for Getting and Setting a PropertyInfo on <typeparamref name="TEntityType"/>
+            </summary>
+            <typeparam name="TEntityType">The type that contains the PropertyInfo</typeparam>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.CompiledPropertyAccessor`1">
+            <summary>
+            CompiledPropertyAccessor is a <see cref="T:Flex.Entity.Api.Helpers.PropertyAccessor`1"/> that pre-compiles (using expression)
+            a Getter and Setter for the PropertyInfo of TEntityType provided via the constructor.
+            </summary>
+            <typeparam name="TEntityType">The type on which the PropertyInfo exists</typeparam>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.Extensions">
+            <summary>
+            Controller to warmup the api
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Extensions.GetBaseUrl(System.Uri)">
+            <summary>
+            
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.Extensions.DoesClientAcceptHalContent(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            checkes if the Accept Header contains HAL media types
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.ContentHelpers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.IDelta">
+            <summary>
+            Track changes for PATCH
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.IDelta.GetChangedPropertyNames">
+            <summary>
+            Returns the Properties that have been modified through this IDelta as an
+            enumerable of Property Names
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.IDelta.GetUnchangedPropertyNames">
+            <summary>
+            Returns the Properties that have not been modified through this IDelta as an
+            enumerable of Property Names
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.IDelta.TrySetPropertyValue(System.String,System.Object)">
+            <summary>
+            Attempts to set the Property called <paramref name="name"/> to the <paramref name="value"/> specified.
+            </summary>
+            <param name="name">The name of the Property</param>
+            <param name="value">The new value of the Property</param>
+            <returns>Returns <c>true</c> if successful and <c>false</c> if not.</returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.IDelta.TryGetPropertyValue(System.String,System.Object@)">
+            <summary>
+            Attempts to get the value of the Property called <paramref name="name"/> from the underlying Entity.
+            </summary>
+            <param name="name">The name of the Property</param>
+            <param name="value">The value of the Property</param>
+            <returns>Returns <c>true</c> if the Property was found and <c>false</c> if not.</returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.IDelta.TryGetPropertyType(System.String,System.Type@)">
+            <summary>
+            Attempts to get the <see cref="T:System.Type"/> of the Property called <paramref name="name"/> from the underlying Entity.
+            </summary>
+            <param name="name">The name of the Property</param>
+            <param name="type">The type of the Property</param>
+            <returns>Returns <c>true</c> if the Property was found and <c>false</c> if not.</returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.IDelta.Clear">
+            <summary>
+            Clears the <see cref="T:Flex.Entity.Api.Helpers.IDelta" />.
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.JwtHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.JwtHelper.GenerateToken(System.String,System.String,System.String)">
+            <summary>
+            Generate a JWT Token based on supplied keys
+            </summary>
+            <param name="symmetricKey"></param>
+            <param name="audience"></param>
+            <param name="issuer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.JwtHelper.Base64UrlDecode(System.String)">
+            <remarks>
+            Take from http://stackoverflow.com/a/33113820
+            </remarks>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.NonValidatingParameterBindingAttribute">
+            <summary>
+            An attribute to disable WebApi model validation for a particular type.
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.Helpers.TransformHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.TransformHelper.TransformHttpErrorToApiResult(System.Net.HttpStatusCode,System.Net.Http.HttpResponseMessage,System.Threading.CancellationToken)">
+            <summary>
+            Converts an HttpError to ApiResult
+            </summary>
+            <param name="statusCodeToCheck"></param>
+            <param name="originalResponseMessage"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flex.Entity.Api.Helpers.TransformHelper.GetFailureResult(System.Net.HttpStatusCode,System.String,System.Net.Http.HttpRequestMessage)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+            <param name="reasonPhrase"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.RouteConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.ContainerConfig">
+            <summary>
+            Does all IOC Registrations
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.ContainerConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.SessionAuthenticationConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.SessionAuthenticationConfig.PreAppStart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.SwaggerConfig">
+            <summary>
+            Swagger Configuration for automatic document generation
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.SwaggerConfig.Register">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.SwaggerConfig.ResolveVersionSupportByRouteConstraint(System.Web.Http.Description.ApiDescription,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="apiDesc"></param>
+            <param name="targetApiVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Entity.Api.WebApiConfig">
+            <summary>
+            Webapi configuration
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.AutofacModuleLoader">
+            <summary>
+            Loads modules configured in the json into autofac
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.AutofacModuleLoader.Loader(Autofac.ContainerBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:Flex.Entity.Api.ErrorHandler.GlobalExceptionHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Flex.Entity.Api.ErrorHandler.AiHandleErrorAttribute">
+            <summary>
+            Logs erros to Application Insight
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.ErrorHandler.AiHandleErrorAttribute.OnException(System.Web.Mvc.ExceptionContext)">
+            <summary>
+            Called when an exception occurs.
+            </summary>
+            <param name="filterContext">The action-filter context.</param><exception cref="T:System.ArgumentNullException">The <paramref name="filterContext"/> parameter is null.</exception>
+        </member>
+        <member name="T:Flex.Entity.Api.WebApiApplication">
+            <summary>
+            WebAPI Application startup
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.Api.WebApiApplication.Application_Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.Api.LoginCallback.IsReusable">
+            <summary>
+            When overridden in a derived class, gets a value that indicates whether the task handler class instance can be reused for another asynchronous task.
+            </summary>
+            <returns>
+            true if the handler can be reused; otherwise, false.  The default is false.
+            </returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Flex.Entity.JWTSecurity.AddChallengeOnUnauthorizedResult" -->
+        <member name="M:Flex.Entity.JWTSecurity.AddChallengeOnUnauthorizedResult.#ctor(System.Net.Http.Headers.AuthenticationHeaderValue,System.Web.Http.IHttpActionResult)">
+            <summary>
+            
+            </summary>
+            <param name="challenge"></param>
+            <param name="innerResult"></param>
+        </member>
+        <member name="P:Flex.Entity.JWTSecurity.AddChallengeOnUnauthorizedResult.Challenge">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Flex.Entity.JWTSecurity.AddChallengeOnUnauthorizedResult.InnerResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.JWTSecurity.AddChallengeOnUnauthorizedResult.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.JWTSecurity.AuthenticationFailureResult.GetAuthenticationFailureResult(System.String,System.Net.Http.HttpRequestMessage)">
+            <summary>
+            
+            </summary>
+            <param name="reasonPhrase"></param>
+            <param name="request"></param>
+        </member>
+        <member name="T:Flex.Entity.JWTSecurity.HttpAuthenticationChallengeContextExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flex.Entity.JWTSecurity.HttpAuthenticationChallengeContextExtensions.ChallengeWith(System.Web.Http.Filters.HttpAuthenticationChallengeContext,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+        </member>
+        <member name="M:Flex.Entity.JWTSecurity.HttpAuthenticationChallengeContextExtensions.ChallengeWith(System.Web.Http.Filters.HttpAuthenticationChallengeContext,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="scheme"></param>
+            <param name="parameter"></param>
+        </member>
+        <member name="M:Flex.Entity.JWTSecurity.HttpAuthenticationChallengeContextExtensions.ChallengeWith(System.Web.Http.Filters.HttpAuthenticationChallengeContext,System.Net.Http.Headers.AuthenticationHeaderValue)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="challenge"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Flex.Entity.JWTSecurity.TransformHelper.TransformHttpErrorToApiResult(System.Net.HttpStatusCode,System.Net.Http.HttpResponseMessage,System.Threading.CancellationToken)">
+            <summary>
+            Converts an HttpError to ApiResult
+            </summary>
+            <param name="statusCodeToCheck"></param>
+            <param name="originalResponseMessage"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flex.Entity.JWTSecurity.TransformHelper.GetFailureResult(System.Net.HttpStatusCode,System.String,System.Net.Http.HttpRequestMessage)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+            <param name="reasonPhrase"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.TagType.Api.Controllers.SwaggerExamples.ApiResultTagTypeResponseExamples200">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.TagType.Api.Controllers.SwaggerExamples.ApiResultTagTypeResponseExamples200.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.TagType.Api.Controllers.SwaggerExamples.ApiResultTagTypeResponseExamples400">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.TagType.Api.Controllers.SwaggerExamples.ApiResultTagTypeResponseExamples400.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.TagType.Api.Controllers.SwaggerExamples.ApiResultTagTypeResponseExamples404">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.TagType.Api.Controllers.SwaggerExamples.ApiResultTagTypeResponseExamples404.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Tag.Api.Controllers.SwaggerExamples.ApiResultTagResponseExamples200">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Tag.Api.Controllers.SwaggerExamples.ApiResultTagResponseExamples200.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Tag.Api.Controllers.SwaggerExamples.ApiResultTagResponseExamples400">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Tag.Api.Controllers.SwaggerExamples.ApiResultTagResponseExamples400.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flex.Tag.Api.Controllers.SwaggerExamples.ApiResultTagResponseExamples404">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Flex.Tag.Api.Controllers.SwaggerExamples.ApiResultTagResponseExamples404.GetExample(System.String)">
+            <summary>
+            </summary>
+            <param name="mediaType"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

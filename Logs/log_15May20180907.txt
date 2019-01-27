@@ -1,0 +1,2 @@
+5/15/2018 9:07:01 AM - Exception occurred while reading smell tag preferences. Could not find a part of the path 'D:\FlexEntity\FLEX.ENTITY.WORKING\FLEX.ENTITY.WORKING\.config\SmellTagging.config'.
+

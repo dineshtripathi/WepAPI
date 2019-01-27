@@ -1,0 +1,8 @@
+﻿{
+  "defaultAssembly": "Flex.Entity.DapperRepository",
+  "modules": [
+    {
+      "type": "Flex.Entity.DapperRepository.RegistrationModuleAutofac, Flex.Entity.DapperRepository"
+    }
+  ]
+}

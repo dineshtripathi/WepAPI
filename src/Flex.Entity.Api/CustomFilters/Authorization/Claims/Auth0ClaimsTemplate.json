@@ -1,0 +1,61 @@
+﻿{
+	"picture": "https://s.gravatar.com/avatar/52514d05a21197cde4644ed0e98ef93f?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fht.png",
+	"nickname": "htat.naing",
+	"user_metadata": {
+		"Client": "Sainsbury",
+		"DefaultApi": "Entities",
+		"DefaultLoad": "Hotwater",
+		"Color": "Red"
+	},
+	"app_metadata": {
+		"Root": "OE",
+		"Email": "htat.naing@openenergi.com",
+		"iss": "https://dineshtripathi.eu.auth0.com/",
+		"iat": 1475054562,
+		"exp": 1506590562,
+		"aud": "BuoGDLlEteKtB1H5yw1GZDEm6l7OSo8k",
+		"sub": "Htat.Naing",
+		"Surname": "Naing",
+		"PermissionsInString": [
+			"Read",
+			"Update",
+			"Delete",
+			"Create",
+            "FullAccess"
+   		],
+      "PermissionsInBytes": [
+			 "0x01",
+             "0x02",
+             "0x04",
+             "0x08",
+             "0x10"
+          
+		],
+      "PermissionsInDecimals": [
+		1,
+        2,
+        4,
+        8 ,
+        16
+       	],
+		"Name": "Htat",
+		"roles": [
+			"user",
+			"administrator",
+			"BmsEngineer"
+		]
+	},
+	"email_verified": true,
+	"user_id": "auth0|57eb913bf1c425a136f98e3d",
+  "identities": [
+    {
+      "user_id": "57eb913bf1c425a136f98e3d",
+      "provider": "auth0",
+      "connection": "Username-Password-Authentication",
+      "isSocial": false
+    }
+  ],
+	"updated_at": "2016-09-28T11:24:06.258Z",
+	"created_at": "2016-09-28T09:45:31.772Z",
+	"global_client_id": "JP1qnou00u0EvhfaEruOi1eCaCsDXWDJ"
+}
